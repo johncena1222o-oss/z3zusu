@@ -1,7 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z3ZUSU</title>
+<style>
+body {
+  background: #050505;
+  color: #ff2020;
+  font-family: monospace;
+  text-align: center;
+  padding: 40px 15px;
+}
+h1 {
+  font-size: 42px;
+  text-shadow: 0 0 15px red;
+}
+.box {
+  border: 1px solid red;
+  padding: 25px;
+  max-width: 450px;
+  margin: 30px auto;
+  box-shadow: 0 0 15px #700;
+}
+button {
+  background: #170000;
+  color: red;
+  border: 1px solid red;
+  padding: 12px 20px;
+  margin: 8px;
+  font-family: monospace;
+  cursor: pointer;
+}
+button:hover {
+  background: #500000;
+}
+#message {
+  margin-top: 25px;
+  min-height: 30px;
+}
+</style>
 </head>
 <body>
+<h1>Z3ZUSU</h1>
+<p>UNKNOWN SYSTEM</p>
+<div class="box">
+  <p>WILLKOMMEN IM SYSTEM</p>
+  <p>STATUS: <span id="status">OFFLINE</span></p>
+  <button onclick="startSystem()">SYSTEM STARTEN</button>
+  <button onclick="stopSystem()">STOPP</button>
+  <p id="message">Warte auf Eingabe...</p>
+</div>
+<script>
+function startSystem() {
+  document.getElementById("status").textContent = "ONLINE";
+  document.getElementById("message").textContent =
+    "Z3ZUSU SYSTEM AKTIVIERT...";
+}
+function stopSystem() {
+  document.getElementById("status").textContent = "OFFLINE";
+  document.getElementById("message").textContent =
+    "SYSTEM GESTOPPT.";
+}
+</script>
 </body>
 </html>
+HTML
